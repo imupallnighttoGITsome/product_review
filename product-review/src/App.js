@@ -1,4 +1,6 @@
 import './App.css';
+import UserInfo from './components/reviews/ReviewUserDescription'
+import ReviewPhotos from './components/reviews/ReviewPhotos';
 
 function App() {
   return (

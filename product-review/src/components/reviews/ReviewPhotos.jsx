@@ -5,13 +5,11 @@ import earbudCase from '../../public/earbud_case.png'
 
 const ReviewPhotos = () => {
     return (
-    <section class="container">
-        <div class="photos">
-            <img src={earbuds} alt='earbuds'/>
-            <img src={earbudsTwo} alt='earbuds'/>
-            <img src={earbudCase} alt='earbud case'/>
-        </div>
-    </section>
+    <div class="container">
+        <img src={earbuds} alt='earbuds'/>
+        <img src={earbudsTwo} alt='earbuds'/>
+        <img src={earbudCase} alt='earbud case'/>
+    </div>
     )
 
 }
