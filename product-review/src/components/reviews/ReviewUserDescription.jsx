@@ -1,24 +1,25 @@
 import React from 'react';
-import userAvatar from '../../public/user-avatar.png'
-import starFilled from '../../public/star-filled.png'
-import starBlank from '../../public/star-blank.png'
+import userAvatar from '../../assets/user-avatar.png'
+import starFilled from '../../assets/star-filled.png'
+import starBlank from '../../assets/star-blank.png'
 
-const UserInfo = () => {
+const UserInfo =(props) => {
     return (
-        <div class="user_container">
-            <div class="user">
-                <img class="user_photo" src={userAvatar}/>
-                <p class="user_name">ina</p>
-            </div>
-            <div class="stars">
-                <img class="star" src={starFilled}/>
-                <img class="star" src={starFilled}/>
-                <img class="star" src={starFilled}/>
-                <img class="star" src={starBlank}/>
-                <img class="star" src={starBlank}/>
-            </div>
-                <p>After a few days of experience, I found that the battery life is really great. The A13 process upgrade and <a href="">...</a></p>
+        <div>
+            <div className="container">
+                <img className="user_photo" alt="user" src={userAvatar}/>
+                <div className="user_name">ina</div>
+                <div className='stars'>
+                    <img className="star" alt="star" src={starFilled}/>
+                    <img className="star" alt="star" src={starFilled}/>
+                    <img className="star" alt="star" src={starFilled}/>
+                    <img className="star" alt="star" src={starBlank}/>
+                    <img className="star" alt="start" src={starBlank}/>
+                </div>
+            <div>After a few days of experience, I found that the battery life is really great. The A13 process upgrade and<span><button onClick={props.onOpen} className='open'>...</button></span></div>
+            </div> 
         </div>
+  
     )
 }
 
