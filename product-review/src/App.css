@@ -1,6 +1,6 @@
 .App {
   display: block;
- 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* USER INFO */
@@ -8,89 +8,147 @@
 .container {
   display: flex;
   flex-direction: row;
+  height: 50px;
+  margin-bottom: 15px;
 }
-.user_photo {
+.user-photo {
   display: flex;
   flex-direction: column;
   height: 50px;
+  margin: 15px;
 }
-.user_name, h3 {
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  font-weight: 400;
-  height: 30px;
-  margin: none;
+
+.user-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: start;
 }
 
 /* USER RATING */
 .stars {
-  display: flex;
-  flex-direction: row;
-  margin-left: -30px;
+  display: inline-block;
+  height: 50px;
+  justify-content: left;
+  padding: 10px;
+  width: 150px;
+  
 }
 .star {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
   height: 15px;
-  margin: 3px;
+  margin: 5px 5px 5px 0px;
 }
-
-
-.review, p {
-  display: flex;
+.review {
+  display: inline-flex;
   flex-direction: column;
-  font-size: 18px;
-  padding-top: 15px;
-  width: 650px;
+  font-size: 17px;
+  font-weight: 400;
+  height: 25px;
+  margin-left: 15px;
+  word-spacing: 1px;
+  width: 430px;
 }
-
 
 /* USER PHOTOS */
-img {
-  height: 150px;
+.product-photo {
+  height: 130px;
   margin: 10px;
+  transition: transform 300ms;
 }
-
+.product-photo:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 9px;
+  transform: scale(2);
+}
 /* MODAL */
+
+.open {
+  background-color: white;
+  border: none;
+}
 .modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
+  position: fixed;
 
 }
 
 .modal-content {
+  background-color: rgb(233, 224, 213);
+  color: rgb(97, 91, 91);
   width: 500px;
-  background-color: bisque;
 }
 
-.modal-header, .modal-footer {
+.modal-title {
+  align-content: center;
   display: flex;
   flex-direction: column;
-  align-content: center;
   padding: 10px;
+  text-align: center;
 }
 
 .modal-body {
-  padding: 10px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+button {
+  border: 2px solid white;
+  border-radius: 3px;
 }
 
 
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media  screen and (max-width: 500px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
-} */
-
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: fit-content;
+  }
+  .user-photo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    width: 120px;
+  }
+  .star {
+    height: 20px;
+  }
+  .user-name {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    padding: none;
+    text-align: center;
+  }
+  .review {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 170px;
+    width: fit-content;
+    text-align: center;
+  }
+  #photos {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    margin-top: 180px;
+  } 
+  .product-photo { 
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+  }
+ 
+} 
 
